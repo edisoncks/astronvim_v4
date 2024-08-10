@@ -26,4 +26,5 @@ return {
   { import = "astrocommunity.pack.yaml" },
   { import = "astrocommunity.recipes.heirline-nvchad-statusline" },
   { import = "astrocommunity.recipes.heirline-vscode-winbar" },
+  { import = "astrocommunity.scrolling.neoscroll-nvim" },
 }

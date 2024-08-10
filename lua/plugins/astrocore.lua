@@ -64,11 +64,6 @@ return {
 
         -- setting a mapping to false will disable it
         -- ["<C-S>"] = false,
-
-        -- Neoscroll
-        -- https://blog.theodorc.no/posts/top5-nvim-plugins/#1-neoscroll
-        ["<C-u>"] = { "<C-u>zz", desc = "Scroll Up" },
-        ["<C-d>"] = { "<C-d>zz", desc = "Scroll Down" },
       },
     },
   },
