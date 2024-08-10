@@ -5,6 +5,7 @@
 ---@type LazySpec
 return {
   "AstroNvim/astrocommunity",
+  { import = "astrocommunity.bars-and-lines.vim-illuminate" },
   { import = "astrocommunity.completion.codeium-nvim" },
   { import = "astrocommunity.diagnostics.error-lens-nvim" },
   { import = "astrocommunity.markdown-and-latex.glow-nvim" },
