@@ -6,6 +6,7 @@
 return {
   "AstroNvim/astrocommunity",
   { import = "astrocommunity.bars-and-lines.vim-illuminate" },
+  { import = "astrocommunity.comment.ts-comments-nvim" },
   { import = "astrocommunity.completion.codeium-nvim" },
   { import = "astrocommunity.diagnostics.error-lens-nvim" },
   { import = "astrocommunity.markdown-and-latex.glow-nvim" },
