@@ -24,4 +24,5 @@ return {
   { import = "astrocommunity.pack.vue" },
   { import = "astrocommunity.pack.xml" },
   { import = "astrocommunity.pack.yaml" },
+  { import = "astrocommunity.recipes.heirline-nvchad-statusline" },
 }
