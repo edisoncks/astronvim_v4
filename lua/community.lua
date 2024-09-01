@@ -13,7 +13,6 @@ return {
   { import = "astrocommunity.lsp.lsp-lens-nvim" },
   { import = "astrocommunity.lsp.lsp-signature-nvim" },
   { import = "astrocommunity.markdown-and-latex.glow-nvim" },
-  { import = "astrocommunity.markdown-and-latex.markview-nvim" },
   { import = "astrocommunity.pack.docker" },
   { import = "astrocommunity.pack.html-css" },
   { import = "astrocommunity.pack.java" },
