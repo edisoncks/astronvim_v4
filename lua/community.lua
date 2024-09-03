@@ -10,6 +10,7 @@ return {
   { import = "astrocommunity.comment.ts-comments-nvim" },
   { import = "astrocommunity.completion.codeium-nvim" },
   { import = "astrocommunity.diagnostics.error-lens-nvim" },
+  { import = "astrocommunity.editing-support.multiple-cursors-nvim" },
   { import = "astrocommunity.indent.indent-rainbowline" },
   { import = "astrocommunity.lsp.lsp-lens-nvim" },
   { import = "astrocommunity.lsp.lsp-signature-nvim" },
