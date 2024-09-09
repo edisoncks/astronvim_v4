@@ -9,3 +9,15 @@ vim.cmd [[ let &shellcmdflag = '-NoLogo -ExecutionPolicy RemoteSigned -Command [
 vim.cmd [[ let &shellredir = '2>&1 | %%{ "$_" } | Out-File %s; exit $LastExitCode' ]]
 vim.cmd [[ let &shellpipe  = '2>&1 | %%{ "$_" } | tee %s; exit $LastExitCode' ]]
 vim.cmd [[ set shellquote= shellxquote= ]]
+
+-- Neovide configuration
+if vim.g.neovide then
+  vim.o.guifont = "MartianMono NF:h10"
+  vim.g.neovide_confirm_quit = true
+  vim.g.neovide_detach_on_quit = "always_detach"
+  vim.g.neovide_remember_window_size = true
+  vim.g.neovide_cursor_antialiasing = true
+  vim.g.neovide_cursor_animate_in_insert_mode = true
+  vim.g.neovide_cursor_animate_command_line = true
+  vim.g.neovide_cursor_vfx_mode = "railgun"
+end
