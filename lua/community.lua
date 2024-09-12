@@ -34,5 +34,6 @@ return {
   { import = "astrocommunity.scrolling.neoscroll-nvim" },
   { import = "astrocommunity.split-and-window.windows-nvim" },
   { import = "astrocommunity.syntax.hlargs-nvim" },
+  { import = "astrocommunity.terminal-integration.flatten-nvim" },
   { import = "astrocommunity.utility.neodim" },
 }
