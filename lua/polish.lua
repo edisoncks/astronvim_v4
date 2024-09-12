@@ -4,11 +4,14 @@
 
 -- Set PowerShell as the default shell
 -- :help shell-powershell
-vim.cmd [[ let &shell = executable('pwsh') ? 'pwsh' : 'powershell' ]]
-vim.cmd [[ let &shellcmdflag = '-NoLogo -ExecutionPolicy RemoteSigned -Command [Console]::InputEncoding=[Console]::OutputEncoding=[System.Text.UTF8Encoding]::new();$PSDefaultParameterValues[''Out-File:Encoding'']=''utf8'';Remove-Alias -Force -ErrorAction SilentlyContinue tee;' ]]
-vim.cmd [[ let &shellredir = '2>&1 | %%{ "$_" } | Out-File %s; exit $LastExitCode' ]]
-vim.cmd [[ let &shellpipe  = '2>&1 | %%{ "$_" } | tee %s; exit $LastExitCode' ]]
-vim.cmd [[ set shellquote= shellxquote= ]]
+local jit = require "jit"
+if jit.os == "Windows" then
+  vim.cmd [[ let &shell = executable('pwsh') ? 'pwsh' : 'powershell' ]]
+  vim.cmd [[ let &shellcmdflag = '-NoLogo -ExecutionPolicy RemoteSigned -Command [Console]::InputEncoding=[Console]::OutputEncoding=[System.Text.UTF8Encoding]::new();$PSDefaultParameterValues[''Out-File:Encoding'']=''utf8'';Remove-Alias -Force -ErrorAction SilentlyContinue tee;' ]]
+  vim.cmd [[ let &shellredir = '2>&1 | %%{ "$_" } | Out-File %s; exit $LastExitCode' ]]
+  vim.cmd [[ let &shellpipe  = '2>&1 | %%{ "$_" } | tee %s; exit $LastExitCode' ]]
+  vim.cmd [[ set shellquote= shellxquote= ]]
+end
 
 -- Neovide configuration
 if vim.g.neovide then
