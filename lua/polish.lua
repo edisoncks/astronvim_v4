@@ -22,4 +22,16 @@ if vim.g.neovide then
   vim.g.neovide_cursor_animate_in_insert_mode = true
   vim.g.neovide_cursor_animate_command_line = true
   vim.g.neovide_cursor_vfx_mode = "railgun"
+  -- Allow Ctrl-Shift-V to paste in Neovide
+  -- https://github.com/neovide/neovide/issues/2680#issuecomment-2204900647
+  require("which-key").add {
+    {
+      mode = { "n", "v", "s", "x", "o", "i", "c", "t" },
+      {
+        "<C-S-v>",
+        function() vim.api.nvim_paste(vim.fn.getreg "+", true, -1) end,
+        desc = "Paste from system clipboard",
+      },
+    },
+  }
 end
