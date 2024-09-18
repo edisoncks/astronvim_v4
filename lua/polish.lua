@@ -2,10 +2,9 @@
 -- things like custom filetypes. This just pure lua so anything that doesn't
 -- fit in the normal config locations above can go here
 
--- Set PowerShell as the default shell
+-- Set PowerShell as the default shell on Windows
 -- :help shell-powershell
-local jit = require "jit"
-if jit.os == "Windows" then
+if vim.fn.has "win32" ~= 0 then
   vim.cmd [[ let &shell = executable('pwsh') ? 'pwsh' : 'powershell' ]]
   vim.cmd [[ let &shellcmdflag = '-NoLogo -ExecutionPolicy RemoteSigned -Command [Console]::InputEncoding=[Console]::OutputEncoding=[System.Text.UTF8Encoding]::new();$PSDefaultParameterValues[''Out-File:Encoding'']=''utf8'';Remove-Alias -Force -ErrorAction SilentlyContinue tee;' ]]
   vim.cmd [[ let &shellredir = '2>&1 | %%{ "$_" } | Out-File %s; exit $LastExitCode' ]]
